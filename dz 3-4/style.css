@@ -1,0 +1,108 @@
+body {
+    background-color: #353535;
+}
+
+img {
+    width : 100%;
+    height: auto;
+}
+
+.link {
+    background-color     : red;
+    border-radius        : 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius   : 10px;
+    -ms-border-radius    : 10px;
+    -o-border-radius     : 10px;
+    display              : block;
+    margin               : 10px 10px;
+    margin-bottom        : 12px;
+    padding              : 5px 5px;
+    width                : 105px;
+    color                : #eee;
+    font-weight          : bold;
+    text-decoration      : none;
+}
+
+.main-item {
+    width        : 300px;
+    margin       : 10px;
+    padding      : 10px;
+    background   : rgb(18, 110, 247);
+    border-radius: 10px;
+    text-align   : center;
+    display      : inline-block;
+}
+
+.menu-item__image {
+    margin-bottom: 6px;
+}
+
+.menu-item__link {
+    text-decoration: none;
+    color          : #eee;
+    font-weight    : bold;
+}
+
+.menu-item__link::before {
+    -webkit-transition: opacity 0.5s, transform 0.5s;
+    -moz-transition   : opacity 0.5s, transform 0.5s;
+    -ms-transition    : opacity 0.5s, transform 0.5s;
+    -o-transition     : opacity 0.5s, transform 0.5s;
+    -webkit-transform : translateX(-10px);
+    -moz-transform    : translateX(-10px);
+    -ms-transform     : translateX(-10px);
+    -o-transform      : translateX(-10px);
+    content           : '';
+    display           : inline-block;
+    opacity           : 0;
+    transform         : translateX(-10px);
+    width             : 0;
+    height            : 0;
+    transition        : opacity 0.5s, transform 0.5s;
+    border-top        : 8px solid transparent;
+    border-right      : 16px solid #eee;
+    border-bottom     : 8px solid transparent;
+}
+
+.menu-item__link::after {
+    -webkit-transition: opacity 0.5s, transform 0.5s;
+    -moz-transition   : opacity 0.5s, transform 0.5s;
+    -ms-transition    : opacity 0.5s, transform 0.5s;
+    -o-transition     : opacity 0.5s, transform 0.5s;
+    -webkit-transform : translateX(10px);
+    -moz-transform    : translateX(10px);
+    -ms-transform     : translateX(10px);
+    -o-transform      : translateX(10px);
+    content           : '';
+    display           : inline-block;
+    opacity           : 0;
+    transform         : translateX(10px);
+    width             : 0;
+    height            : 0;
+    transition        : opacity 0.5s, transform 0.5s;
+    border-top        : 8px solid transparent;
+    border-bottom     : 8px solid transparent;
+    border-left       : 16px solid #eee;
+}
+
+.main-item:hover .menu-item__link::before,
+.main-item:hover .menu-item__link::after {
+    opacity: 1;
+}
+
+.menu-item__link:hover::before {
+    -webkit-transform: translateX(0px) rotate(180deg);
+    -moz-transform   : translateX(0px) rotate(180deg);
+    -ms-transform    : translateX(0px) rotate(180deg);
+    -o-transform     : translateX(0px) rotate(180deg);
+    transform        : translateX(0px) rotate(180deg);
+}
+
+.menu-item__link:hover::after {
+    -webkit-transform: translateX(0px) rotate(-180deg);
+    -moz-transform   : translateX(0px) rotate(-180deg);
+    -ms-transform    : translateX(0px) rotate(-180deg);
+    -o-transform     : translateX(0px) rotate(-180deg);
+    transform        : translateX(0px) rotate(-180deg);
+}
